@@ -19,12 +19,22 @@
 @import "bootstrap";
 @import "font-awesome";
 
+html {
+   position: relative;
+   min-height: 100%;
+ }
+
+ body {
+   /* Margin bottom by footer height */
+   margin-bottom: 100px;
+ }
+
 // --------- Navbar ---------
 
 .navbar-default {
     background-color: #222222;  //背景颜色
     border-color: #222222; //边框色
-    margin-bottom: 0; //底部 margin 不撑开距离
+    // margin-bottom: 0; //底部 margin 不撑开距离
     border-radius: 0; //圆角为0
 }
 
@@ -64,6 +74,11 @@
     color: #212121;
   }
 
+  #search-id {
+width: 200px;
+padding-top: 7px;
+}
+
 //---------Box---------
 
 .box {
@@ -71,6 +86,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   margin-bottom: 50px;
+  margin-top:-20px;
 
 .box-inner {
         background-color: rgba(250, 250, 250, 0.69);
@@ -130,11 +146,23 @@
 
 //---------Footer---------
 
-footer {
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 100px;
+  background-color: #233140;
+
+  p {
    color: white;
+   margin-top: 30px;
+   }
 }
 
-footer .footer-below {
-   padding: 25px 0;
-   background-color: #233140;
+//-------common--------
+
+.col-centered{
+  float: none;
+  margin: 0 aruo;
 }
